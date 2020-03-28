@@ -1,0 +1,11 @@
+[Unit]
+Description=SQTT-sub
+After=mosquitto.service
+
+[Service]
+Type=simple
+ExecStart=/home/pi/mqtt_sub.sh
+TimeoutStartSec=0
+
+[Install]
+WantedBy=default.target
