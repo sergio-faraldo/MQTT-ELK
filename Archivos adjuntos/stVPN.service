@@ -1,0 +1,12 @@
+[Unit]
+Description=Conexion VPN a Nube
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/sbin/openvpn --pull-filter ignore redirect-gateway --config /home/pi/client.ovpn
+User=root
+TimeoutStartSec=0
+
+[Install]
+WantedBy=default.target

@@ -1,0 +1,8 @@
+filebeat.inputs:
+- type: log
+  paths:
+    - "/home/pi/mqtt_messages/log.*"
+output.logstash:
+  hosts: ["10.8.0.1:5000"]
+  ssl:
+    certificate_authorities: ["/home/pi/logstash.crt"]
